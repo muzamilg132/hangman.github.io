@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Rokkitt", sans-serif;
+    background: #141313;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display SC", sans-serif;
+    font-weight: 800;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* Game */
+
+.game-container {
+    padding: 20px 30px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background-color: #141313;
+}
+
+.figure-container {
+    fill: transparent;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.figure-part {
+    display: block;
+}
+
+.start-face {
+    display: none;
+}
+
+.lose-face {
+    display: none;
+}
+
+.word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+}
+
+#wrong-letters p {
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+#wrong-letters span {
+    font-size: 2rem;
+}
+
+.letter {
+    border-bottom: 3px solid #fffdfd;
+    font-size: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 30px;
+    color: #ffffff;
+}
+
+.final-msg-container {
+    display: none;
+    text-align: center;
+}
+
+#final-message {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+}
+
+#letter-error {
+    display: none;
+    color: #ff3333;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+#hint p {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+
+#play-button {
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#play-button:hover {
+    background-color: #a1d3ff;
+}
+
+#start-btn {
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#start-btn:hover {
+    background-color: #a1d3ff;
+}
+
+#userInput {
+    display: none;
+}
+
+#guess {
+    font-size: 1.8rem;
+}
+
+#submit-btn {
+    font-size: 1.9rem;
+    border-radius: 5px;
+}
+
+#score span {
+    font-size: 2rem;
+}
+
+#score .lose {
+    color: #ff3333;
+}
+
+#score .win {
+    color: #62c962;
+}
+
+.sr-only {
+    font-size: 2rem;
+}
+
+/* Header */
+header {
+    background-color: #141313;
+    border-bottom: 1px solid;
+}
+
+.page-heading {
+    font-size: 3rem;
+    color: #a1d3ff;
+}
+
+.headings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-heading {
+    font-size: 1.75rem;
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+/* Footer */
+
+footer div {
+    font-size: 2rem;
+}
+
+footer div p {
+    font-size: 2rem;
+}
+
+footer div a {
+    color: inherit;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+footer div i {
+    font-size: 3rem;
+}
+
+footer div i:hover {
+    color: #a1d3ff;
+}
+
+#footer {
+    padding: 2rem;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid;
+    background-color: #141313;
+    flex: 1;
+}
+
+/* 404 */
+.home a {
+    font-size: 5rem;
+    text-decoration: none;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 600px) { 
+    .page-heading {
+        font-size: 5rem;
+    }
+    
+    .sub-heading {
+        font-size: 3rem;
+    }
+}
